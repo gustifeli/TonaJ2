@@ -21,25 +21,21 @@
                 <div class="navbar-header">
                     <a id="btnMenu" class="navbar-collapse pull-right" data-toggle="collapse" href="#collapse1"><img src="Image/menu_Sandwich.png"></a>
                     <div>
-                        <!--                    @Html.ActionLink("TONA", "tona", "Home", new { area = "" }, new { @id = "TONA", @class = "navbar-brand" })-->
                         <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
                         <a href="Login.jsp"><img id="img" src="Image/maniqui.png"></a>
                     </div>
                 </div>
                 <div class="navbar-collapse collapse">
                     <div class="pull-right">
-<!--                        @*<a id="btnMenu"  href="#collapse1"><img src="Image/menu_Sandwich.png"></a>*@-->
                     </div>
                 </div>
                 <div id="collapse1" class="txtbtn panel-collapse collapse pull-right">
                     <div id="aMenu">
                         <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
-
                     </div>
                     <div id="aMenu">
                         <a class="aTxtColor" href="Contactos.jsp">Contacto</a>
                     </div>
-
                 </div>
             </div>
         </div>
