@@ -23,30 +23,26 @@
                 <div class="navbar-header">
                     <a id="btnMenu" class="navbar-collapse pull-right" data-toggle="collapse" href="#collapse1"><img src="Image/menu_Sandwich.png"></a>
                     <div>
-                        <!--                    @Html.ActionLink("TONA", "tona", "Home", new { area = "" }, new { @id = "TONA", @class = "navbar-brand" })-->
                         <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
                         <a href="Login.jsp"><img id="img" src="Image/maniqui.png"></a>
                     </div>
                 </div>
                 <div class="navbar-collapse collapse">
                     <div class="pull-right">
-                        <!--                        @*<a id="btnMenu"  href="#collapse1"><img src="Image/menu_Sandwich.png"></a>*@-->
                     </div>
                 </div>
                 <div id="collapse1" class="txtbtn panel-collapse collapse pull-right">
                     <div id="aMenu">
                         <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
-
                     </div>
                     <div id="aMenu">
                         <a class="aTxtColor" href="Contactos.jsp">Contacto</a>
                     </div>
-
                 </div>
             </div>
         </div>
         <h1 id="encabezado">TEMPORADA PRIMAVERA-VERANO</h1>
-         <div class="container">
+        <div class="container">
             <center><span>Ordenar por:</span>
                 <select class="sort-by">
                     <option value="price-ascending">Menor a mayor</option>
@@ -78,22 +74,22 @@
                 </c:forEach>
             </div>
         </div>
-    <div>
-        <footer class="footer">
-            <div>
-                <nav id="nav" class=" navbar-inverse navbar-fixed-bottom">
-                    <div id="txtfooter">
-                        <p class="text-center credit txtbtn">- TONA - Santa Eufemia, Cordoba, Argentina</p>
-                        <div class="text-center img">
-                            <a href="https://www.instagram.com/t.o.n.aa/?hl=es"> <img src="Image/Instagram.png"></a>
-                            <a href="https://www.facebook.com/TONAAOFICIAL/?pnref=story"> <img src="Image/facebook.png"></a>
+        <div>
+            <footer class="footer">
+                <div>
+                    <nav id="nav" class=" navbar-inverse navbar-fixed-bottom">
+                        <div id="txtfooter">
+                            <p class="text-center credit txtbtn">- TONA - Santa Eufemia, Cordoba, Argentina</p>
+                            <div class="text-center img">
+                                <a href="https://www.instagram.com/t.o.n.aa/?hl=es"> <img src="Image/Instagram.png"></a>
+                                <a href="https://www.facebook.com/TONAAOFICIAL/?pnref=story"> <img src="Image/facebook.png"></a>
+                            </div>
                         </div>
-                    </div>
-                </nav>
-            </div>
-        </footer>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="Scripts/bootstrap.min.js"></script>
     </body>
 </html>
