@@ -1,0 +1,97 @@
+#txtfooter { /*Texto footer sta... NO REALIZA NINGUNA FUNCION*/
+    color: white;
+    vertical-align: middle;
+}
+
+#nav { /* navbar superior*/
+    margin: auto;
+    padding: 10px;
+    background-color: black;
+    border-radius: 0px;
+    width: 100%;
+}
+
+#img { /*img maniqui TONA*/
+    width: 14px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    left: 144px;
+    top: 23px;
+}
+
+#TONA { /* style titulo TONA*/
+    color: #FFF;
+    font-family: Ebrima,sans-serif;
+    font-size: 3em;
+    text-decoration: none;
+    padding-left: 4%;
+}
+
+.txtbtn { /*Style botones producto y contacto*/
+    color: #FFF;
+    font-size: 16px;
+    font-family: Ebrima,sans-serif;
+}
+
+#jmb {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding: 0px;
+}
+
+.carousel-indicators {
+    top: 85%;
+}
+
+#btnMenu {
+    position: absolute;
+    right: 9px;
+    padding: 9px;
+}
+
+.aTxtColor:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.aTxtColor {
+    color: white;
+}
+.aTxtColor:active {
+    color: white;
+}
+
+#aMenu {
+    color: white;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+#imgLO {
+    padding: 15px;
+}
+/*test*/
+div.upload {
+    width: 157px;
+    height: 57px;
+    background-color: black;
+    overflow: hidden;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+
+}
+#htmlTona {
+    background: black;
+}
+
