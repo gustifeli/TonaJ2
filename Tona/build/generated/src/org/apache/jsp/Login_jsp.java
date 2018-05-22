@@ -88,7 +88,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <meta charset=\"UTF-8\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css\" integrity=\"sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4\" crossorigin=\"anonymous\">\r\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n");
-      out.write("        <!--<link type=\"text/css\" href=\"Content/bootstrap.css\" rel=\"stylesheet\">-->\r\n");
+      out.write("        <link type=\"text/css\" href=\"Content/bootstrap.css\" rel=\"stylesheet\">\r\n");
       out.write("        <link type=\"text/css\" href=\"Content/styleLogReg.css\" rel=\"stylesheet\">\r\n");
       out.write("\r\n");
       out.write("    </head>\r\n");
@@ -126,6 +126,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    \r\n");
       out.write("        </body>-->\r\n");
       out.write("    <body scroll=\"no\" style=\"overflow-x: hidden; overflow-y: hidden;\">\r\n");
+      out.write("        <div class=\"background-transparent\"></div>\r\n");
       out.write("        <div class=\"modals\" id=\"cont\">\r\n");
       out.write("            <div class=\"modal-content\">\r\n");
       out.write("                <div class=\"modal-header\">\r\n");
