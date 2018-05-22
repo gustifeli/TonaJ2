@@ -62,12 +62,6 @@
                             <a class="dropdown-toggle" data-toggle="dropdown"><b id="txt" href="#"><img src="Image/ic_user.png"></b></a>
                             <ul class="dropdown-menu">
                                 <li>
-
-                                    <!--                                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
-                                                                        {
-                                                                        @Html.AntiForgeryToken()-->
-                                    <!--                                    <a href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a>-->
-                                    <!--}-->
                                     <a href="Logout" method="get"  > Cerrar sesión</a>
                                 </li>
                             </ul>
@@ -118,76 +112,6 @@
                             </tr>
                         </c:forEach>
                     </tbody>
-
-                    <!--                <tr>
-                                        <td style="text-align: left; vertical-align: middle; width: 20%;">Imagen</td>
-                                        <td style="text-align: left; vertical-align: middle; width: 50%;">Descripción</td>
-                                        <td style="text-align: left; vertical-align: middle; width: 30%;">Acciones</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img id="imgMin" src="Image/tona.jpg" class="img-rounded"></td>
-                                        <td>
-                                            <input type="text" class="form-control" placeholder="Descripción">
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-link">
-                                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                                Editar
-                                            </button>
-                                            <button type="button" class="btn btn-link">
-                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                                Borrar
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img id="imgMin" src="Image/tona1.jpg" class="img-rounded"></td>
-                                        <td>
-                                            <input type="text" class="form-control" placeholder="Descripción">
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-link">
-                                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                                Editar
-                                            </button>
-                                            <button type="button" class="btn btn-link">
-                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                                Borrar
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img id="imgMin" src="Image/tona2.jpg" class="img-rounded"></td>
-                                        <td>
-                                            <input type="text" class="form-control" placeholder="Descripción">
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-link">
-                                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                                Editar
-                                            </button>
-                                            <button type="button" class="btn btn-link">
-                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                                Borrar
-                                            </button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><img id="imgMin" src="Image/tona.jpg" class="img-rounded"></td>
-                                        <td>
-                                            <input type="text" class="form-control" placeholder="Descripción">
-                                        </td>
-                                        <td>
-                                            <button type="button" class="btn btn-link">
-                                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                                                Editar
-                                            </button>
-                                            <button type="button" class="btn btn-link">
-                                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                                Borrar
-                                            </button>
-                                        </td>
-                                    </tr>-->
                 </table>
             </div>
         </div>
@@ -197,9 +121,7 @@
                     <nav id="nav" class=" navbar-inverse navbar-fixed-bottom">
                         <div id="txtfooter">
                             <p class="text-center credit txtbtn">- TONA - Santa Eufemia, Cordoba, Argentina</p>
-                            <div class="text-center img">
-                                <!--                            <a href="https://www.instagram.com/t.o.n.aa/?hl=es"> <img src="Image/Instagram.png"></a>
-                                                            <a href="https://www.facebook.com/TONAAOFICIAL/?pnref=story"> <img src="Image/facebook.png"></a>-->
+                            <div class="text-center img"> 
                             </div>
                         </div>
                     </nav>
