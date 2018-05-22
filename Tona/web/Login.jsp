@@ -15,33 +15,73 @@
     <head>
         <title>Login</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" href="Content/bootstrap.css" rel="stylesheet">
         <link type="text/css" href="Content/styleLogReg.css" rel="stylesheet">
 
     </head>
-    <body>
-        <div id="table">
-            <div id="">
+    <!--    <body>
+            <div id="table">
                 <div id="">
-                    <img src="Image/TONAlogin.png" >
-                    <p style="color: #c9302c">${sessionScope['error']}</p>
-                    <form action="LogIn" method="post">
-                        <div class="form-group">
-                            <label>Usuario </label>
-                            <div class="col-lg-12">
-                                <input type="text"  name="name" placeholder="Ingrese su usuario" class="form-control">
+                    <div id="">
+                        <img src="Image/TONAlogin.png" >
+                        <p style="color: #c9302c">${sessionScope['error']}</p>
+                        <form action="LogIn" method="post">
+                            <div class="form-group">
+                                <label>Usuario </label>
+                                <div class="col-lg-12">
+                                    <input type="text"  name="name" placeholder="Ingrese su usuario" class="form-control">
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Contraseña </label>
-                            <div class="col-md-12">
-                                <input type="text" name="pass" placeholder="Ingrese su Contraseña" class="form-control"
+                            <div class="form-group">
+                                <label>Contraseña </label>
+                                <div class="col-md-12">
+                                    <input type="text" name="pass" placeholder="Ingrese su Contraseña" class="form-control"
+                                </div>
                             </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-1 col-md-10 text-center">
+                                    <input type="submit" value="Iniciar sesión" class="btn btn-danger" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+    
+        </body>-->
+    <body scroll="no" style="overflow-x: hidden; overflow-y: hidden;">
+        <div class="background-transparent"></div>
+        <div class="modals" id="cont">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <img class="imgTona" src="Image/TONAlogin.png" >
+                        <p style="color: #c9302c">${sessionScope['error']}</p>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form action="Iniciar" method="post">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Usuario</span>
+                            </div>
+                            <input name="name" type="text" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-offset-1 col-md-10 text-center">
-                                <input type="submit" value="Iniciar sesión" class="btn btn-danger" />
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Contraseña</span>
+                            </div>
+                            <input name="pass" type="text" class="form-control">
+                        </div>
+                        <div>
+                            <p style="color: #c9302c">${requestScope.msj}</p>
+                        </div>
+                        <div class="modal-footer modal_footer" >
+                            <div class="form-group center">
+                                <input type="submit" class="btn-center btn btn-primary" value="Acceder">
                             </div>
                         </div>
                     </form>
@@ -49,8 +89,6 @@
             </div>
         </div>
 
-
     </body>
-
 </html>
 
