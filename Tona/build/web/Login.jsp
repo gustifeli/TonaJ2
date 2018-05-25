@@ -19,7 +19,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" href="Content/bootstrap.css" rel="stylesheet">
         <link type="text/css" href="Content/styleLogReg.css" rel="stylesheet">
-
     </head>
     <!--    <body>
             <div id="table">
@@ -52,43 +51,33 @@
     
     
         </body>-->
-    <body scroll="no" style="overflow-x: hidden; overflow-y: hidden;">
+    <body>
         <div class="background-transparent"></div>
-        <div class="modals" id="cont">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div>
-                        <img class="imgTona" src="Image/TONAlogin.png" >
-                        <p style="color: #c9302c">${sessionScope['error']}</p>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <form action="Iniciar" method="post">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Usuario</span>
-                            </div>
-                            <input name="name" type="text" class="form-control">
-                        </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Contraseña</span>
-                            </div>
-                            <input name="pass" type="text" class="form-control">
-                        </div>
-                        <div>
-                            <p style="color: #c9302c">${requestScope.msj}</p>
-                        </div>
-                        <div class="modal-footer modal_footer" >
-                            <div class="form-group center">
-                                <input type="submit" class="btn-center btn btn-primary" value="Acceder">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <center><div class="modal-content">
+            <div class="modal-body">
+                <img src="Image/TONAlogin.png" >
+                <p style="color: #c9302c">${sessionScope['error']}</p>
 
-    </body>
+                <form action="Iniciar" method="post">
+                    <div class="input-group">
+                            <span class="input-group-addon">Usuario</span>
+                        <input name="name" type="text" class="form-control">
+                    </div>
+                    <div class="input-group">
+                            <span class="input-group-addon">Contraseña</span>
+                        <input name="pass" type="text" class="form-control">
+                    </div>
+                    <div>
+                        <p style="color: #c9302c">${requestScope.msj}</p>
+                    </div>
+                    <div class="modal-footer" >
+                        <div class="col-md-12 text-center">
+                            <input type="submit" class="btn btn-outline-dark" value="Acceder">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div></center>
+</body>
 </html>
 
