@@ -15,7 +15,8 @@
         <link rel="stylesheet" type="text/css" href="Content/bootstrap.css" >
         <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/styleAddProducto.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>-->
         <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
         <title>+ - Producto</title>
@@ -44,7 +45,45 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="modals">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Producto</h5>
+                </div>
+                <form method="post" action="AddProd" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="titulo">Descripción</label>
+                            <textarea name="descripcion" placeholder="Ingrese la descripción" id="" cols="30" rows="3" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <lable for="titulo">Imagen</lable>
+                            <input type="file" name="logo" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <select name="idCampana" placeholder="Seleccione la campaña" class="form-control" required>
+                                <c:forEach var="c" items="${campana}">
+                                    <option value="${c.idCampana}"/>
+                                    <c:out value="${c.campana}"/>
+                                    </option>
+                                </c:forEach>
+                            </select>
+                        </div>
+                        <div>
+                            <img src="" alt="ImgPreview">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Guardar Producto</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+<!--        <div class="row">
             <div class="col-xs-0 col-md-3"></div>
             <div id="cont" class="col-xs-12 col-md-6">
                 <form method="post" action="AddProd" enctype="multipart/form-data">
@@ -90,7 +129,7 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div>-->
         <div>
             <footer class="footer">
                 <div>

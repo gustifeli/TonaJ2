@@ -13,8 +13,8 @@
 
 .row {
     border: 1px solid grey;
-    margin-right: 15%;
-    margin-left: 15%;
+    margin-right: auto;
+    margin-left: auto;
     background-color: snow;
     opacity: 0.9;
     margin-top: 1%;
