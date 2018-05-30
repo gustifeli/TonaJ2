@@ -58,7 +58,7 @@
                 <img src="Image/TONAlogin.png" >
                 <p style="color: #c9302c">${sessionScope['error']}</p>
 
-                <form action="Iniciar" method="post">
+                <form action="LogIn" method="post">
                     <div class="input-group">
                             <span class="input-group-addon">Usuario</span>
                         <input name="name" type="text" class="form-control">
