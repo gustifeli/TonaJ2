@@ -46,90 +46,91 @@
             </div>
         </div>
         <div class="modals">
+            <div class="container">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Producto</h3>
+                    </div>
+                    <form method="post" action="AddProd" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="" class="labelSize">Descripción</label>
+                                <textarea name="descripcion" placeholder="Ingrese la descripción" id="" cols="30" rows="3" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <lable class="labelSize" for="">Imagen</lable>
+                                <input type="file" name="logo" accept="image/*">
+                            </div>
+                            <div class="form-group">
+                                <select name="idCampana" placeholder="Seleccione la campaña" class="form-control" required>
+                                    <c:forEach var="c" items="${campana}">
+                                        <option value="${c.idCampana}"/>
+                                        <c:out value="${c.campana}"/>
+                                        </option>
+                                    </c:forEach>
+                                </select>
+                            </div>
+                            <div>
+                                <img src="" alt="ImgPreview">
+                            </div>
 
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Producto</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Guardar Producto</button>
+                        </div>
+                    </form>
                 </div>
-                <form method="post" action="AddProd" enctype="multipart/form-data">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="titulo">Descripción</label>
-                            <textarea name="descripcion" placeholder="Ingrese la descripción" id="" cols="30" rows="3" class="form-control"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <lable for="titulo">Imagen</lable>
-                            <input type="file" name="logo" accept="image/*">
-                        </div>
-                        <div class="form-group">
-                            <select name="idCampana" placeholder="Seleccione la campaña" class="form-control" required>
-                                <c:forEach var="c" items="${campana}">
-                                    <option value="${c.idCampana}"/>
-                                    <c:out value="${c.campana}"/>
-                                    </option>
-                                </c:forEach>
-                            </select>
-                        </div>
-                        <div>
-                            <img src="" alt="ImgPreview">
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Guardar Producto</button>
-                    </div>
-                </form>
             </div>
         </div>
 
 
-<!--        <div class="row">
-            <div class="col-xs-0 col-md-3"></div>
-            <div id="cont" class="col-xs-12 col-md-6">
-                <form method="post" action="AddProd" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="titulo" style="font-size: 2em;"><strong>Producto:</strong></label>
-                    </div>
-                    <div class="form-group">
-                        <label for="titulo">Descripcion</label>
-                        <textarea class="form-control" name="descripcion" rows="3" placeholder="Descripción"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="titulo">Imagen</label>
-                        <div>
-                            <table class="table">
-                                <tr>
-                                    <th style="text-align: left; vertical-align: middle; width: 20%;">
-                                        <input type="file" name="logo" accept="image/*">
-                                        <select name="idCampana" placeholder="Seleccione la <campaña" class="form-control" required>
-                                            <c:forEach var="c" items="${campana}">
-                                                <option value="${c.idCampana}"/>
-                                                <c:out value="${c.campana}"/>
-                                                </option>
-                                            </c:forEach>
-                                        </select>
-                                    </th>
-                                </tr>
-                            </table>
-                            <center><div>
-                                    <p><img id="imgMin" src="Image/tona.jpg" class="img-rounded"></p>
-                                </div></center>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div>
-                            <table class="table">
-                                <tr>
-                                    <th style="text-align: center; vertical-align: middle; width: 50%;">
-                                        <p><button type="submit" class="btn btn-ttc" onclick="msj()">Cargar Producto</button></p>
-                                    </th>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>-->
+        <!--        <div class="row">
+                    <div class="col-xs-0 col-md-3"></div>
+                    <div id="cont" class="col-xs-12 col-md-6">
+                        <form method="post" action="AddProd" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="titulo" style="font-size: 2em;"><strong>Producto:</strong></label>
+                            </div>
+                            <div class="form-group">
+                                <label for="titulo">Descripcion</label>
+                                <textarea class="form-control" name="descripcion" rows="3" placeholder="Descripción"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="titulo">Imagen</label>
+                                <div>
+                                    <table class="table">
+                                        <tr>
+                                            <th style="text-align: left; vertical-align: middle; width: 20%;">
+                                                <input type="file" name="logo" accept="image/*">
+                                                <select name="idCampana" placeholder="Seleccione la <campaña" class="form-control" required>
+        <c:forEach var="c" items="${campana}">
+            <option value="${c.idCampana}"/>
+            <c:out value="${c.campana}"/>
+            </option>
+        </c:forEach>
+    </select>
+</th>
+</tr>
+</table>
+<center><div>
+<p><img id="imgMin" src="Image/tona.jpg" class="img-rounded"></p>
+</div></center>
+</div>
+</div>
+<div class="form-group">
+<div>
+<table class="table">
+<tr>
+<th style="text-align: center; vertical-align: middle; width: 50%;">
+    <p><button type="submit" class="btn btn-ttc" onclick="msj()">Cargar Producto</button></p>
+</th>
+</tr>
+</table>
+</div>
+</div>
+</form>
+</div>
+</div>-->
         <div>
             <footer class="footer">
                 <div>
