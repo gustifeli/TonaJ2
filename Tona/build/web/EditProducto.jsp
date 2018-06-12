@@ -12,39 +12,37 @@
 
         <meta charset="utf-8" http-equiv="Content-type" content="text/html">
         <meta name="viewport" content="width=device-width" initial-scale=1.0">
-        <link rel="stylesheet" href="Content/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="Content/bootstrap.css" >
+        <!--<link rel="stylesheet" href="Content/bootstrap.min.css">-->
+        <!--<link rel="stylesheet" type="text/css" href="Content/bootstrap.css" >-->
         <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/styleAddProducto.css">
-        <!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>-->
-        <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">        <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
         <title>+ - Producto</title>
     </head>
     <body background="Image/prueba.jpg">
-        <div id="nav" class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a id="btnMenu" class="navbar-collapse pull-right" data-toggle="collapse" href="#collapse1"><img src="Image/menu_Sandwich.png"></a>
-                    <div>
-                        <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
-                        <a href="Login.jsp"><img id="img" src="Image/maniqui.png"></a>
-                    </div>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <div class="pull-right">
-                    </div>
-                </div>
-                <div id="collapse1" class="txtbtn panel-collapse collapse pull-right">
-                    <div id="aMenu">
-                        <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
-                    </div>
-                    <div id="aMenu">
-                        <a class="aTxtColor" href="Contacto.jsp">Contacto</a>
-                    </div>
+        <nav id='nav' class="navbar navbar-dark">
+            
+                <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
+                <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class=" navbar justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="aTxtColor" href="Contactos.jsp">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </nav>
         <div class="row">
             <div class="col-xs-0 col-md-3"></div>
             <div id="cont" class="col-xs-12 col-md-6">
@@ -98,7 +96,7 @@
         <div>
             <footer class="footer">
                 <div>
-                    <nav id="nav" class=" navbar-inverse navbar-fixed-bottom">
+                    <nav id="nav" class=" navbar-inverse fixed-bottom">
                         <div id="txtfooter">
                             <p class="text-center credit txtbtn"> - TONA - Santa Eufemia, Cordoba, Argentina</p>
                             <div class="text-center img">
