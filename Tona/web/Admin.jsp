@@ -12,75 +12,69 @@
         <meta name="viewport" content="width=device-width" initial-scale=1.0">
         <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/styleAddProducto.css">
-        <link type="text/css" href="Content/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-        <script src="Scripts/bootstrap.min.js"></script>
         <title>All Products</title>
     </head>
     <body background="Image/prueba.jpg">
 
-<!--        <script>
-            $("#btnEliminar").click(function(){
-            swal({
-            title:"confirmation",
-                    text: "Esta Seguro",
-                    icon: "warning",
-                    buttons:true,
-                    dangerMode: true,
-            })
-                    .then((delete) => {
-                    if (delete){
-                    function(){
-                    var id = document.getElementById("btnEliminar").value;
-                    window.location.href = 'EliminarProducto?cod=' + id;
-                    }
-                    swal('Perfecto! El Producto se elimino correctamente!', {
-                    icon: "success",
-                            )};
-                    } else{
-                    swal('El producto no se eliminó!')
-                    }
-                    });
-                    });
-        </script>-->
+        <!--        <script>
+                    $("#btnEliminar").click(function(){
+                    swal({
+                    title:"confirmation",
+                            text: "Esta Seguro",
+                            icon: "warning",
+                            buttons:true,
+                            dangerMode: true,
+                    })
+                            .then((delete) => {
+                            if (delete){
+                            function(){
+                            var id = document.getElementById("btnEliminar").value;
+                            window.location.href = 'EliminarProducto?cod=' + id;
+                            }
+                            swal('Perfecto! El Producto se elimino correctamente!', {
+                            icon: "success",
+                                    )};
+                            } else{
+                            swal('El producto no se eliminó!')
+                            }
+                            });
+                            });
+                </script>-->
+        <nav id='nav' class="navbar navbar-dark">
 
-
-        <nav id="nav" class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a id="btnMenu" class="navbar-collapse pull-right" data-toggle="collapse" href="#collapse1"><img src="Image/menu_Sandwich.png"></a>
-                    <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
-                    <a href="Login.jsp"><img id="img" src="Image/maniqui.png"></a>
+            <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
+            <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
+            <div class="dropdown">
+                <button class="btn btn-transparente" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="Image/ic_user.png">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="Logout" method="get"  > Cerrar sesión</a>
                 </div>
-                <div class="navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li id="drop" class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown"><b id="txt" href="#"><img src="Image/ic_user.png"></b></a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="Logout" method="get"  > Cerrar sesión</a>
-                                </li>
-                            </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class=" navbar justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="aTxtColor" href="Contactos.jsp">Contacto</a>
                         </li>
                     </ul>
                 </div>
-                <div id="collapse1" class="txtbtn panel-collapse collapse pull-right">
-                    <div id="aMenu">
-                        <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
-
-                    </div>
-                    <div id="aMenu">
-                        <a class="aTxtColor" href="Contactos.jsp">Contacto</a>
-                    </div>
-                </div>
             </div>
         </nav>
-        <div class="contenedor">
+        <div class="container-fluid">
             <h1 id="productos"> Productos<a href="obtenerCampana" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Producto</a></h1>
             <div class="panel-body">
                 <table class="table table-responsive table-hover">
@@ -88,7 +82,7 @@
                         <tr>
                             <th hidden="true" scope="col">Cod.</th>
                             <th class="rowWidth" scope="col">Imagen</th>
-                            <th scope="col">Descripción</th>
+                            <th style="width: 76%" scope="col">Descripción</th>
                             <th hidden="true" scope="col">CodCamp</th>
                             <th scope="col">Campaña</th>
                             <th class="rowWidth" scope="col"></th>
@@ -128,5 +122,8 @@
                 </div>
             </footer>
         </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     </body>
 </html>
