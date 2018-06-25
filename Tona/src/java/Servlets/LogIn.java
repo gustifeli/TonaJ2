@@ -5,7 +5,6 @@
  */
 package Servlets;
 
-
 import Controlador.Data;
 import Controlador.DataUser;
 import Modelos.Validador;
@@ -43,7 +42,7 @@ public class LogIn extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LogIn</title>");            
+            out.println("<title>Servlet LogIn</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet LogIn at " + request.getContextPath() + "</h1>");
@@ -65,10 +64,10 @@ public class LogIn extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
+
         String error = "No puede acceder, verifique los datos e intentelo nuevamente.";
         request.setAttribute("mensaje", error);
-        
+
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/error.jsp");
         dispatcher.forward(request, response);
     }
@@ -92,38 +91,40 @@ public class LogIn extends HttpServlet {
         Matcher m = p.matcher(user);
         Validador v = new Validador();
         DataUser d = new DataUser();
-        
+
         //Campos vacios
-        if (user.isEmpty()||pass.isEmpty()) {
+        if (user.isEmpty() || pass.isEmpty()) {
             r.setAttribute("error", "Hay campos vacios");
-        }else{
+        } else {
             //No hay campos vacios. 
             //si la direccion es valida
             if (m.find()) {
                 r.setAttribute("error", "El usuario no es correcto");
-            }else{
+            } else {
                 //La direccion es correcta. Verificar si la contrseña es correcta
                 if (v.isUsernameOrPasswordValid(pass)) {
                     try {
                         d.conectar();
                         if (d.cuentaExistente(user, pass)) {
                             //la cuenta existe. obtengo el nombre de usuario y lo guardo en la session
-                            String users = d.getName(user);
-                            r.setAttribute("sessionUser", users);
-                        }else{
+                            //String users = d.getName(user);
+                            r.setAttribute("sessionUser", user);
+                            response.sendRedirect("ListaProducto");
+                        } else {
                             r.setAttribute("error", "Este usuario ya fue registrado");
                         }
                         d.desconectar();
-                        
+
                     } catch (Exception e) {
+                        System.out.println("Error servlet LOGIN: " + e);
                     }
-                }else{
+                } else {
                     r.setAttribute("error", "Contraseña no es válida");
                 }
             }
-//        response.sendRedirect("Admin.jsp");
-          response.sendRedirect("ListaProducto");
+//          request.getSession().setAttribute("nombreUsuario", user)
         }
+        response.sendRedirect("Login.jsp");
     }
     @Override
     public String getServletInfo() {

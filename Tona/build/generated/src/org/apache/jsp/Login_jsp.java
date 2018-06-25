@@ -133,7 +133,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope['error']}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("</p>\r\n");
       out.write("\r\n");
-      out.write("                <form action=\"Iniciar\" method=\"post\">\r\n");
+      out.write("                <form action=\"IniciarSesion\" method=\"post\">\r\n");
       out.write("                    <div class=\"input-group\">\r\n");
       out.write("                            <span class=\"input-group-addon\">Usuario</span>\r\n");
       out.write("                        <input name=\"name\" type=\"text\" class=\"form-control\">\r\n");

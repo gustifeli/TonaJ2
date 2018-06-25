@@ -60,6 +60,10 @@
         <servlet-name>ObtenerImagenGaleriaPrimaVerano</servlet-name>
         <servlet-class>Servlets.ObtenerImagenGaleriaPrimaVerano</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>IniciarSesion</servlet-name>
+        <servlet-class>Servlets.IniciarSesion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -111,6 +115,10 @@
     <servlet-mapping>
         <servlet-name>ObtenerImagenGaleriaPrimaVerano</servlet-name>
         <url-pattern>/ObtenerImagenGaleriaPrimaVerano</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IniciarSesion</servlet-name>
+        <url-pattern>/IniciarSesion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

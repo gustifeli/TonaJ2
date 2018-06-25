@@ -51,7 +51,7 @@
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
             <div class="dropdown">
                 <button class="btn btn-transparente" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="Image/ic_user.png">
+                    <img src="Image/ic_user.png"><a href="#">Bienvenido: <c:out value="${sessionScope['sessionUser']}"/></a>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="Logout" method="get"  > Cerrar sesión</a>

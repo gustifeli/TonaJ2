@@ -20,7 +20,7 @@ public class DataUser extends Data {
         PreparedStatement ps = connection.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         if (rs.next()) {
-            return rs.getString("name");
+            return rs.getString("user");
         }
         return null;
     }
