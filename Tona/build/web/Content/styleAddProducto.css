@@ -18,8 +18,10 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 
 .btn-transparente{ background-color: transparent;}
 .centrar{ margin-left: auto; margin-right: auto;}
-
+/*style nombre user logeado*/
 #transparent{background-color: transparent}
 @media (max-width: 4096px) and (min-width: 1280px) {
     .user{margin-left: 70%}
 }
+/*style btn agregar producto*/
+.btn-agregar{float: right; display: inline-flex !Important; margin-top: 5px}

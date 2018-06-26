@@ -53,14 +53,7 @@
 
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
-            <!--            <div class="dropdown">
-                            <button class="btn btn-transparente" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="Image/ic_user.png"><a href="#">Bienvenido: <c:out value="${sessionScope['sessionUser']}"/></a>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="Logout" method="get"  > Cerrar sesión</a>
-                            </div>
-                        </div>-->
+
             <div class="user fixed">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -92,7 +85,7 @@
         </nav>
 
         <div class="container-fluid">
-            <h1 id="productos"> Productos<a href="obtenerCampana" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Producto</a></h1>
+            <h1 id="productos"> Productos<a role="button" type="button" href="obtenerCampana" class="btn btn-agregar btn-ttc"><i class="material-icons sm-dark">add_circle_outline</i> Producto</a></h1>
             <div class="panel-body">
                 <table class="table table-responsive table-hover">
                     <thead>
