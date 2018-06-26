@@ -7,8 +7,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%-- En caso de que exista una sesion iniciada redirecciono a index.jsp. "NO tiene caso mostrar este formulario cuando hay una sesion iniciada --%>
 <t:if test="${sessionScope['sessionUser']!=null}">
-    <% response.sendRedirect("Admin.jsp");%>
+    <% response.sendRedirect("ListaProducto");%>
 </t:if>
+<% 
+response.setHeader("Pragma", "no-cache"); 
+response.setHeader("Cache-Control", "no-cache"); 
+response.setDateHeader("Expires", 0); %> 
 <!DOCTYPE html>
 
 <html>

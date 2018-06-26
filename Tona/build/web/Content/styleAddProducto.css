@@ -18,3 +18,8 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 
 .btn-transparente{ background-color: transparent;}
 .centrar{ margin-left: auto; margin-right: auto;}
+
+#transparent{background-color: transparent}
+@media (max-width: 4096px) and (min-width: 1280px) {
+    .user{margin-right: -35%}
+}

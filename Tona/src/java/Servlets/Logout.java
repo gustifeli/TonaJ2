@@ -33,11 +33,14 @@ public class Logout extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+//        PrintWriter out = response.getWriter();
         HttpSession session = request.getSession(true);
-        
+        //session.setAttribute("sessionUser", null);
+       // request.getSession().invalidate();
         //cerrar session
+       session.removeAttribute("sessionUser");
         session.invalidate();
+        
         //Redirecciono a Tona.jsp
         response.sendRedirect("Tona.jsp");
     }

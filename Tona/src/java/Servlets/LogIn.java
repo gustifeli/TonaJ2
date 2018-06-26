@@ -124,6 +124,7 @@ public class LogIn extends HttpServlet {
             }
 //          request.getSession().setAttribute("nombreUsuario", user)
         }
+        request.getSession().invalidate();
         response.sendRedirect("Login.jsp");
     }
     @Override

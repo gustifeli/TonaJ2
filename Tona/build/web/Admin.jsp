@@ -5,6 +5,9 @@
 --%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:if test="${sessionScope['sessionUser']==null}">
+    <%response.sendRedirect("Login.jsp");%>
+</c:if>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,6 +20,7 @@
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>All Products</title>
     </head>
     <body background="Image/prueba.jpg">
@@ -49,14 +53,26 @@
 
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
-            <div class="dropdown">
-                <button class="btn btn-transparente" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="Image/ic_user.png"><a href="#">Bienvenido: <c:out value="${sessionScope['sessionUser']}"/></a>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="Logout" method="get"  > Cerrar sesión</a>
+            <!--            <div class="dropdown">
+                            <button class="btn btn-transparente" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="Image/ic_user.png"><a href="#">Bienvenido: <c:out value="${sessionScope['sessionUser']}"/></a>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="Logout" method="get"  > Cerrar sesión</a>
+                            </div>
+                        </div>-->
+
+            <span class="user navbar-text">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="transparent"><i class="material-icons sm-dark sm-inactive">account_circle</i></span>
+                    </div>
+                    <input id="transparent" type="text" class="form-control" value="${sessionScope['sessionUser']}" disabled="true" aria-label="Username" aria-describedby="basic-addon1">
+                    <form action="Logout" method="post">
+                        <button class="btn btn-sm btn-outline-danger"  type="submit"><i class="material-icons sm-dark sm-inactive">power_settings_new</i></button>                            
+                    </form>
                 </div>
-            </div>
+            </span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -73,7 +89,9 @@
                     </ul>
                 </div>
             </div>
+
         </nav>
+     
         <div class="container-fluid">
             <h1 id="productos"> Productos<a href="obtenerCampana" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Producto</a></h1>
             <div class="panel-body">

@@ -34,12 +34,20 @@ public class ListaProducto extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setHeader("Pragma", "no-cache");
+        response.addHeader("Cache-Control", "must-revalidate");
+        response.addHeader("Cache-Control", "no-cache");
+        response.addHeader("Cache-Control", "no-store");
+        response.setDateHeader("Expires", 0);
         Data data = new Data();
+
         try {
             ArrayList<Producto> prod = data.obtenerProducto();
             request.setAttribute("producto", prod);
-            RequestDispatcher rd = request.getRequestDispatcher("Admin.jsp");
-            rd.forward(request, response);
+
+            request.getRequestDispatcher("Admin.jsp").forward(request, response);
+//            RequestDispatcher rd = request.getRequestDispatcher("Admin.jsp");
+//            rd.forward(request, response);
         } catch (Exception e) {
             System.out.println("Servlet ListaProducto: Error al llenar la tabla de producto: " + e.getMessage());
         }

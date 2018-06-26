@@ -74,6 +74,9 @@ public class IniciarSesion extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //        processRequest(request, response);
+        response.setHeader("Pragma", "no-cache");
+        response.setHeader("Cache-Control", "no-cache");
+        response.setDateHeader("Expires", 0);
         HttpSession r = request.getSession(true);
         String user = request.getParameter("name");
         String pass = request.getParameter("pass");
@@ -91,7 +94,9 @@ public class IniciarSesion extends HttpServlet {
                     if (d.userExistente(user)) {
                         if (d.cuentaExistente(user, pass)) {
                             r.setAttribute("sessionUser", user);
-                            request.getRequestDispatcher("ListaProducto").forward(request, response);
+                            System.out.println("iniciando session");
+                            response.sendRedirect("ListaProducto");
+                            //request.getRequestDispatcher("ListaProducto").forward(request, response);
                         } else {
                             System.out.println("No coinciden");
                             r.setAttribute("error", "¡Ups, el usuario y contraseña no coinciden!");
@@ -99,16 +104,22 @@ public class IniciarSesion extends HttpServlet {
                     } else {
                         System.out.println("No existe el usuario");
                         r.setAttribute("error", "¡El usuario ingresado no existe!");
+                        //response.sendRedirect("Login.jsp");
                     }
                 } catch (Exception e) {
                     System.out.println("Error servlet iniciarSesion: " + e);
+                   // response.sendRedirect("Login.jsp");
+
                 }
                 d.desconectar();
-            }else{
+            } else {
                 r.setAttribute("error", "¡La contraseña no es vaslida!");
-            }    
+                //response.sendRedirect("Login.jsp");
+
+            }
         }
-        request.getRequestDispatcher("Login.jsp").forward(request, response);
+        // response.sendRedirect("Login.jsp");
+       // request.getRequestDispatcher("Login.jsp").forward(request, response);
     }
 
     /**
