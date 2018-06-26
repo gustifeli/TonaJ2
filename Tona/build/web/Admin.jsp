@@ -81,14 +81,14 @@
                     </ul>
                 </div>
             </div>
-            
-        </nav>
 
+        </nav>
+        <h1 id="encabezado"> Productos</h1>
         <div class="container-fluid">
-            <h1 id="productos"> Productos<a role="button" type="button" href="obtenerCampana" class="btn btn-agregar btn-ttc"><i class="material-icons sm-dark">add_circle_outline</i> Producto</a></h1>
+            <a role="button" type="button" href="obtenerCampana" class="btn btn-agregar btn-ttc"><i class="material-icons sm-dark">add_circle_outline</i> Producto</a>
             <div class="panel-body">
                 <table class="table table-responsive table-hover">
-                    <thead>
+                    <thead class="thead-dark">
                         <tr>
                             <th hidden="true" scope="col">Cod.</th>
                             <th class="rowWidth" scope="col">Imagen</th>
@@ -107,8 +107,8 @@
                                 <td><c:out value="${p.descripcion}"/></td>
                                 <td hidden="true"><c:out value="${p.idCampana}"/></td>
                                 <td><c:out value="${p.campana}"/></td>
-                                <td><a role="button" class="btn btn-primary" type="button" href="BuscarProductoCod?cod=${p.idproducto}">Editar</a></td>
-                                <td><a role="button" id="btnEliminar" class="btn btn-danger" type="button" href="EliminarProducto?cod=${p.idproducto}">Eliminar</a></td>
+                                <td><form action="BuscarProductoCod?cod=${p.idproducto}" method="post"><button role="button" class="btn btn-outline-primary" type="submit">Editar</button></form></td>
+                                <td><form action="EliminarProducto?cod=${p.idproducto}" method="post"><button role="button" id="btnEliminar" class="btn btn-outline-danger" type="submit">Eliminar</button></form></td>
 
                                 <!--START TEST-->
                                 <!--<td><a role="button" id="btnEliminar" class="btn btn-danger" value="${p.idproducto}" type="button">Eliminar</a></td>-->

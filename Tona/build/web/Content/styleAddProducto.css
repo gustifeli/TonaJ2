@@ -24,4 +24,6 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
     .user{margin-left: 70%}
 }
 /*style btn agregar producto*/
-.btn-agregar{float: right; display: inline-flex !Important; margin-top: 5px}
+.btn-agregar{float: right; display: inline-flex !Important; margin-top: 5px; margin-bottom: 5px}
+/*encabezado producto*/
+#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 0.5%; margin-bottom: 0.5%;}
