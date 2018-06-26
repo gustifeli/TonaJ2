@@ -9,10 +9,7 @@
 <t:if test="${sessionScope['sessionUser']!=null}">
     <% response.sendRedirect("ListaProducto");%>
 </t:if>
-<% 
-response.setHeader("Pragma", "no-cache"); 
-response.setHeader("Cache-Control", "no-cache"); 
-response.setDateHeader("Expires", 0); %> 
+
 <!DOCTYPE html>
 
 <html>

@@ -79,13 +79,8 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       }
       _jspx_tagPool_t_if_test.reuse(_jspx_th_t_if_0);
-      out.write('\r');
-      out.write('\n');
- 
-response.setHeader("Pragma", "no-cache"); 
-response.setHeader("Cache-Control", "no-cache"); 
-response.setDateHeader("Expires", 0); 
-      out.write(" \r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("\r\n");
       out.write("<html>\r\n");

@@ -61,8 +61,7 @@
                                 <a class="dropdown-item" href="Logout" method="get"  > Cerrar sesión</a>
                             </div>
                         </div>-->
-
-            <span class="user navbar-text">
+            <div class="user fixed">
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="transparent"><i class="material-icons sm-dark sm-inactive">account_circle</i></span>
@@ -72,7 +71,7 @@
                         <button class="btn btn-sm btn-outline-danger"  type="submit"><i class="material-icons sm-dark sm-inactive">power_settings_new</i></button>                            
                     </form>
                 </div>
-            </span>
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -89,9 +88,9 @@
                     </ul>
                 </div>
             </div>
-
+            
         </nav>
-     
+
         <div class="container-fluid">
             <h1 id="productos"> Productos<a href="obtenerCampana" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> Producto</a></h1>
             <div class="panel-body">
