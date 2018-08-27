@@ -12,15 +12,11 @@ div#info {position:absolute; overflow:hidden; width: 300px; height: 370px; backg
 div#info1 {position:absolute; overflow:hidden; width: 300px; height: 370px; background-color: rgba(31, 31, 31, 0.9); opacity:0; transition: opacity 0.3s; color: white;}
 div#imagen:hover div#info {opacity:1;}
 div#imagen1:hover div#info1 { opacity: 1;}
-p#headline {position: absolute; font-size: 1.5rem; margin-left: -15px; margin-top: 15px; transition: margin-left 0.3s;}
-p#headline1 {position: absolute; font-size: 1.5rem; margin-left: -15px; margin-top: 15px; transition: margin-left 0.3s;}
+p#headline {position: absolute; font-size: 1.5rem; margin-left: -15px; margin-top: 15px; transition: margin-left 0.3s; font-family: 'Coco Gothic'}
+p#headline1 {position: absolute; font-size: 1.5rem; margin-left: -15px; margin-top: 15px; transition: margin-left 0.3s; font-family:'Coco Gothic';}
 div#imagen:hover p#headline {margin-left: 55px;}
 div#imagen1:hover p#headline1 {margin-left: 40px;}
-p#descripcion {font-size: 1rem; text-align: center; margin-top: 200px; transition: margin-top 0.4s;}
-p#descripcion1 {font-size: 1rem; text-align: center; margin-top: 200px; transition: margin-top 0.4s;}
+p#descripcion {font-size: 1rem; text-align: center; margin-top: 200px; transition: margin-top 0.4s; font-family:'Coco Gothic';}
+p#descripcion1 {font-size: 1rem; text-align: center; margin-top: 200px; transition: margin-top 0.4s; font-family:'Coco Gothic';}
 div#imagen:hover p#descripcion {margin-top: 75px;}
 div#imagen1:hover p#descripcion1 {margin-top: 75px;}
-
-
-
-
