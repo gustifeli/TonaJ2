@@ -13,3 +13,4 @@ Tona/nbproject/private/private.properties
 Tona/nbproject/private/private.xml
 Tona/nbproject/project.properties
 Tona/build/web/WEB-INF/classes/Controlador/Data.class
+*.xml
