@@ -26,7 +26,7 @@ public class Data {
     public Connection connection;
     public final static String UserDb = "root";
     public final static String Passdb = "34885949";
-    public final static String url = "jdbc:mysql://localhost:3306/tona?zeroDateTimeBehavior=convertToNull";
+    public final static String url = "jdbc:mysql://127.0.0.1:3306/tona?zeroDateTimeBehavior=CONVERT_TO_NULL";
 
     //Contectar con la base de datos.
     public void conectar() throws SQLException, ClassNotFoundException {
