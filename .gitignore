@@ -14,5 +14,12 @@ Tona/nbproject/private/private.xml
 Tona/nbproject/project.properties
 Tona/build/web/WEB-INF/classes/Controlador/Data.class
 *.xml
+<<<<<<< HEAD
 /Tona/build/
 /Tona/dist/
+=======
+Tona/nbproject/build-impl.xml
+Tona/nbproject/genfiles.properties
+Tona/nbproject/project.properties
+Tona/nbproject/project.xml
+>>>>>>> 0ab684991bf99732d192d89fb45ddc969fe524c8
