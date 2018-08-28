@@ -8,3 +8,7 @@ Tona/nbproject/private/private.xml
 Tona/nbproject/private/private.xml
 *.properties
 mysql-connector-java-8.0.12.jar
+Tona/nbproject/ant-deploy.xml
+Tona/nbproject/private/private.properties
+Tona/nbproject/private/private.xml
+Tona/nbproject/project.properties
